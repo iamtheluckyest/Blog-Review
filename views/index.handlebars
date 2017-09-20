@@ -57,7 +57,7 @@
                                     title="Sucks big time - 1 star"></label>
                                 <input type="radio" id="starhalf" name="rating" value="0.5" /><label class="half" for="starhalf"
                                     title="Sucks big time - 0.5 stars"></label>
-                            </fieldset>{{this.cumulative_rating}}</span> </p>
+                            </fieldset> </p>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,9 @@
     $.fn.stars = function () {
         return $(this).each(function () {
             var rating = parseFloat($(this).attr("data-rating"));
+            console.log(rating)
             rating = Math.round(rating * 2) / 2;
+            console.log(rating)
             $(this).find("input[name='rating'][value='" + rating + "']").attr("checked", "checked");
         });
     };

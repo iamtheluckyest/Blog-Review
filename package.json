@@ -1,5 +1,5 @@
 {
-  "name": "groupproject2",
+  "name": "blog-review",
   "version": "1.0.0",
   "description": "blog reviews",
   "main": "server.js",
@@ -13,7 +13,8 @@
   },
   "keywords": [
     "blog",
-    "sequelize"
+    "review",
+    "rating"
   ],
   "author": "David Goodrich, Annalisa Alden, Jared Gonzalez",
   "license": "ISC",
