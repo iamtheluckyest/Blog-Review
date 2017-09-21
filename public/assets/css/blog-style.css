@@ -13,6 +13,10 @@ p {
     font-family: 'Lato', sans-serif;
 }
 
+section {
+    margin:10px;
+    padding:10px;
+}
 .addOne {
 	padding: 30px;
 }
@@ -114,10 +118,11 @@ animation-delay: -1s;
 	100% {stroke-dashoffset: -35%;}
 }
 .card {
-    border: 0;
+    /* border-width: 0; */
     margin-bottom: 15px;
     margin-top: 15px;
 }
+
 
 .rootCard {
     height: 345px;
@@ -137,6 +142,7 @@ animation-delay: -1s;
 .container {
     padding-bottom: 20px;
     margin-bottom:20px;
+    background-color: #FFF;
 }
 
 .full-row {
@@ -171,14 +177,13 @@ animation-delay: -1s;
 
 .underline {
     border-bottom: solid 1px black;
-    margin:20px;
 }
+
 .indent {
-    margin: 40px;
+    margin-left: 40px;
 }
 #userHead {
     font-family: 'Fredericka the Great', cursive ;
-    padding-left: 40px;
     font-size: 4rem;
 }
 #indentation {
@@ -205,56 +210,52 @@ fieldset, label { margin: 0; padding: 0; }
 h1 { font-size: 1.5em; margin: 10px; }
 
 /****** Style Star Rating Widget *****/
-
 .rating { 
-  border: none;
-  float: left;
-}
-
-.rating > input { 
-    display: none; 
-} 
-
-.rating > label:before { 
-  margin: 5px;
-  font-size: 1.25em;
-  font-family: FontAwesome;
-  display: inline-block;
-  content: "\f005";
-}
-
-.rating > .half:before { 
-  content: "\f089";
-  position: absolute;
-}
-
-.rating > label { 
-  color: #ddd; 
- float: right; 
-}
-
-span.stars, span.stars span {
+    border: none;
+    float: left;
+  }
+  
+  .rating > input { display: none; } 
+  .rating > label:before { 
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
     display: inline-block;
-    background: url("../img/stars.png") 0 -16px repeat-x;
-    width: 80px;
-    height: 16px;
-}
-span.stars span {
-    background-position: 0 0;
-}
+    content: "\f005";
+  }
+  
+  .rating > .half:before { 
+    content: "\f089";
+    position: absolute;
+  }
+  
+  .rating > label { 
+    color: #ddd; 
+   float: right; 
+  }
+  
+  span.stars, span.stars span {
+      display: inline-block;
+      background: url("../img/stars.png") 0 -16px repeat-x;
+      width: 80px;
+      height: 16px;
+  }
+  span.stars span {
+      background-position: 0 0;
+  }
+  
+  /***** CSS Magic to Highlight Stars on Hover *****/
+  
+  .rating[data-active='false'] > input:checked ~ label, /* show gold star when clicked */
+  .rating[data-active='false']:not(:checked) > label:hover, /* hover current star */
+  .rating[data-active='false']:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+  
+  .rating[data-active='false'] > input:checked + label:hover, /* hover current star when changing rating */
+  .rating[data-active='false'] > input:checked ~ label:hover,
+  .rating[data-active='false'] > label:hover ~ input:checked ~ label, /* lighten current selection */
+  .rating[data-active='false'] > input:checked ~ label:hover ~ label { color: #FFED85;  } 
 
-/***** CSS Magic to Highlight Stars on Hover *****/
-
-.rating[disabled='false'] > input:checked ~ label, /* show gold star when clicked */
-.rating[disabled='false']:not(:checked) > label:hover, /* hover current star */
-.rating[disabled='false']:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
-
-.rating[disabled='false'] > input:checked + label:hover, /* hover current star when changing rating */
-.rating[disabled='false'] > input:checked ~ label:hover,
-.rating[disabled='false'] > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating[disabled='false'] > input:checked ~ label:hover ~ label { color: #FFED85;  } 
-
-.rating[disabled='true'] > input:checked ~ label { color: #FFD700;  } /* hover previous stars in list */
+.rating[data-active='true'] > input:checked ~ label { color: #FFD700;  } /*hover previous stars in list*/
 
 
 .close:focus {
