@@ -1,5 +1,6 @@
 # Blog Review
-http://blogreview.herokuapp.com/ \n
+http://blogreview.herokuapp.com/
+
 Rate, review, and read reviews for blogs of all kinds.
 
 ## Purpose
