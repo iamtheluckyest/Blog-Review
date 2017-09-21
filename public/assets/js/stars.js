@@ -1,4 +1,3 @@
-
 /*$.fn.stars = function () {
     return */
     $(".rating[data-active='true']").each(function () {

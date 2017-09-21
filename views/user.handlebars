@@ -1,52 +1,68 @@
-<div class ="container">
-{{> navbar/navbar}}
-  <h1 class="mt-3 mb-3" id="userHead">{{user.name}}</h1>
-  <h2 id="indentation">Reviews</h2>
-  {{#each user.Reviews}}
-      <div class="card mt-3">
-          <div class="card-body" >
-              <h3 class="title linked"><a href="../blog/{{this.Blog.id}}" class="no-decoration-link">{{this.Blog.title}}</a></h3>
-              {{#if ../userMatch}}
-              <button type="button" class="btn btnStyle editReviewBtn" data-toggle="modal" data-target="#editReviewModal" data-blog-title="{{this.Blog.title}}" data-review-id="{{this.id}}">Edit Review</button>
-              {{/if}}
-              <h4 class="underline"><em>{{this.title}}</em></h4>
-              <p class="indent"><span class="stars">{{this.rating}}</span> </p>
-              <p class="indent">{{this.body}}</p>
-          </div>
-      </div>
-  {{/each}}
- </div>
+<div class="container">
+    {{> navbar/navbar}}
+    <section class="underline">
+        <h1 class="mt-3 mb-3 pageHead">{{user.name}}</h1>
+    </section>
+    <section>
+        <h2>Reviews</h2>
+        {{#each user.Reviews}}
+        <div class="card mt-3 card-list">
+            <a href="../blog/{{this.Blog.id}}" class="card-header title linked">
+                <h3>{{this.Blog.title}}</h3>
+            </a>
+            <div class="card-body">
+                {{#if ../userMatch}}
+                <button type="button" class="btn btnStyle editReviewBtn" data-toggle="modal" data-target="#editReviewModal" data-blog-title="{{this.Blog.title}}"
+                    data-review-id="{{this.id}}">Edit Review</button> 
+                {{/if}}
+                <h4 class="underline"><em>{{this.title}}</em></h4>
+                <form class="indent">
+                    <fieldset class="rating cumulative" data-rating="{{this.rating}}" data-active="true">
+                        {{> stars}}
+                    </fieldset>
+                </form>
+                <br style="clear:both">
+                <p class="indent">{{this.body}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </section>
+</div>
 
 {{#if userMatch}}
-<div id="editReviewModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="writeReviewModal"
-  aria-hidden="true" data-user-sub="{{currentUserSub}}"> 
-  <div class="modal-dialog modal-lg">
-      <div class="modal-content addOne">
-          <div class="modal-header">
-              <h5 class="modal-title">Review for <span id="blogTitle"></span></h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body">
-
-          </div>
-      </div>
-  </div>
+<div id="editReviewModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="editReviewModal" aria-hidden="true"
+    data-user-sub="{{currentUserSub}}">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content addOne">
+            <div class="modal-header">
+                <h5 class="modal-title">Review for <span id="review-blogTitle"></span></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- "Edit review" content will populate here -->
+            </div>
+        </div>
+    </div>
 </div>
 {{/if}}
 
-<script>
-  $("#editReviewBtn").on("click", function(event){
-    var blogTitle = $(this).attr("data-blog-title")
-    $("#blogTitle").html(blogTitle)
-  })
 
-  $("#editReviewModal").on("show.bs.modal", function (event) {
-      var reviewId = $(event.relatedTarget).data("review-id")
-      // Update the modal's content, alerting user that review already exists, and show edit modal.
-      $("#editReviewForm, .modal-body").load("/api/review/edit/" + reviewId);
-  });
+<script>
+    $( document ).ready(function(){
+        $(".editReviewBtn").on("click", function (event) {
+            var blogTitle = $(this).attr("data-blog-title")
+            $("#review-blogTitle").html(blogTitle);
+        })
+
+        $("#editReviewModal").on("show.bs.modal", function (event) {
+            var reviewId = $(event.relatedTarget).data("review-id")
+            // Update the modal's content, alerting user that review already exists, and show edit modal.
+            $("#editReviewForm, .modal-body").load("/api/review/edit/" + reviewId);
+        });
+    });
+
 </script>
 
- {{> scripts/scripts}}
+{{> scripts/scripts}}

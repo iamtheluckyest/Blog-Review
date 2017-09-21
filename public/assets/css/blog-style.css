@@ -9,6 +9,10 @@ body {
     background-color: lightgrey;
 }
 
+a, a:hover {
+    text-decoration: none;
+}
+
 p {
     font-family: 'Lato', sans-serif;
 }
@@ -123,7 +127,6 @@ animation-delay: -1s;
     margin-top: 15px;
 }
 
-
 .rootCard {
     height: 345px;
 }
@@ -133,9 +136,9 @@ animation-delay: -1s;
     color: white;
 }
 .linked.title:hover{
-    background-color: #A12424;
+    background-color: #992121;
     text-decoration: none;
-    color:white;
+    color: white;
     cursor: pointer;
 }
 
@@ -180,16 +183,27 @@ animation-delay: -1s;
 }
 
 .indent {
-    margin-left: 40px;
+    margin-left: 20px;
 }
-#userHead {
+.pageHead {
     font-family: 'Fredericka the Great', cursive ;
     font-size: 4rem;
 }
-#indentation {
-    padding-left: 60px;
-    font-family: 'Lato', sans-serif;
+
+.editReviewBtn {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    z-index: 10;
 }
+
+.editReviewBtn:hover {
+    border-width: 1px;
+    border-color: #FFF;
+}
+
+
+
 .login {
     margin-right: 10px;
 }
