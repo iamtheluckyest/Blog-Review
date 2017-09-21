@@ -1,6 +1,5 @@
 # Blog Review
-http://blogreview.herokuapp.com/
-
+http://blogreview.herokuapp.com/  
 Rate, review, and read reviews for blogs of all kinds.
 
 ## Purpose
@@ -14,3 +13,6 @@ With an overabundance of blogs in existence, it's hard to know which ones are wo
   * Add blogs
   * Rate blogs
   * Review blogs
+  
+## Credits
+Thanks to David Goodrich and Jared Gonzalez-Dees for their contributions to this website.
