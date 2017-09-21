@@ -1,5 +1,5 @@
 # Blog Review
-stark-hollows-20874.herokuapp.com
+http://blogreview.herokuapp.com/ \n
 Rate, review, and read reviews for blogs of all kinds.
 
 ## Purpose
