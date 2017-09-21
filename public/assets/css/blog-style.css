@@ -1,6 +1,18 @@
-body {
-   padding-top:45px;
+html {
+    margin: 0px;
+    width:100%;
 }
+body {
+    width:100%;
+    padding-top:45px;
+    margin: 0px;
+    background-color: lightgrey;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+
 .addOne {
 	padding: 30px;
 }
@@ -9,6 +21,7 @@ body {
 	border-bottom: solid 1px black;
     font-family: 'Fredericka the Great', cursive;
     font-size:40px;
+    background-color: #FFF;
 }
 .nav-color {
     background: rgb(237, 236, 236);
@@ -17,15 +30,15 @@ body {
 	margin-top: 40px;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 html, body{
   height: 100%;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .header{
   background: #000;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 .submitBtn {
     margin-right: 10px;
@@ -52,8 +65,8 @@ html, body{
 
 svg {
     display: block;
-    font: 9.5em 'Roboto';
-    font-family: 'Roboto', sans-serif;
+    font: 9.5em 'Lato';
+    font-family: 'Lato', sans-serif;
     width: 100%;
     height: 300px;
     margin: 0 auto;
@@ -102,16 +115,10 @@ animation-delay: -1s;
 }
 .card {
     border: 0;
-    box-shadow: 10px 10px 5px #888888;
     margin-bottom: 15px;
     margin-top: 15px;
 }
-.card-body {
-    font-family: 'Fredericka the Great', cursive;
-}
-.card-text {
-    font-family: "Roboto", sans-serif;
-}
+
 .rootCard {
     height: 345px;
 }
@@ -119,21 +126,22 @@ animation-delay: -1s;
     font-family: 'Fredericka the Great', cursive;    
     background-color: #B92828;
     color: white;
-    padding: 30px;
 }
 .linked.title:hover{
-    box-shadow: 0px 5px 7px -2px rgba(0, 0, 0, 0.4);
+    background-color: #A12424;
+    text-decoration: none;
+    color:white;
     cursor: pointer;
 }
 
 .container {
-    box-shadow: 10px 10px 5px #888888, -5px 10px 5px #888888;
     padding-bottom: 20px;
     margin-bottom:20px;
 }
 
-.background-main {
-    background-color: lightgrey;
+.full-row {
+    margin-right:0px;
+    margin-left:0px;
 }
 
 .colored-link {
@@ -151,7 +159,7 @@ animation-delay: -1s;
 
 .no-decoration-link:hover {
     text-decoration:none;
-    color:inherit;
+    color:white;
 }
 
 .no-results {
@@ -175,7 +183,7 @@ animation-delay: -1s;
 }
 #indentation {
     padding-left: 60px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 .login {
     margin-right: 10px;
@@ -194,7 +202,6 @@ animation-delay: -1s;
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
 fieldset, label { margin: 0; padding: 0; }
-body{ margin: 20px; }
 h1 { font-size: 1.5em; margin: 10px; }
 
 /****** Style Star Rating Widget *****/
@@ -204,7 +211,10 @@ h1 { font-size: 1.5em; margin: 10px; }
   float: left;
 }
 
-.rating > input { display: none; } 
+.rating > input { 
+    display: none; 
+} 
+
 .rating > label:before { 
   margin: 5px;
   font-size: 1.25em;
@@ -235,18 +245,22 @@ span.stars span {
 
 /***** CSS Magic to Highlight Stars on Hover *****/
 
-.rating > input:checked ~ label, /* show gold star when clicked */
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+.rating[disabled='false'] > input:checked ~ label, /* show gold star when clicked */
+.rating[disabled='false']:not(:checked) > label:hover, /* hover current star */
+.rating[disabled='false']:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
 
-.rating > input:checked + label:hover, /* hover current star when changing rating */
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+.rating[disabled='false'] > input:checked + label:hover, /* hover current star when changing rating */
+.rating[disabled='false'] > input:checked ~ label:hover,
+.rating[disabled='false'] > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating[disabled='false'] > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+.rating[disabled='true'] > input:checked ~ label { color: #FFD700;  } /* hover previous stars in list */
+
 
 .close:focus {
     outline: none;
 }
+
 
 @media (max-width: 767px) {
     .margin-btn {
