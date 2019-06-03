@@ -18,6 +18,20 @@ patch:
         patched: '2019-06-03T17:49:19.765Z'
     - auth0-js > superagent > debug:
         patched: '2019-06-03T17:49:19.765Z'
+    - jwks-rsa > debug:
+        patched: '2019-06-03T17:53:03.811Z'
+    - auth0-js > superagent > debug:
+        patched: '2019-06-03T17:53:03.811Z'
+    - sequelize > retry-as-promised > debug:
+        patched: '2019-06-03T17:53:03.811Z'
+    - auth0-js > idtoken-verifier > superagent > debug:
+        patched: '2019-06-03T17:53:03.811Z'
+    - express > finalhandler > debug:
+        patched: '2019-06-03T17:53:03.811Z'
+    - express-auth0-simple > express-session > debug:
+        patched: '2019-06-03T17:53:03.811Z'
+    - sequelize > debug:
+        patched: '2019-06-03T17:53:03.811Z'
   'npm:extend:20180424':
     - auth0-js > superagent > extend:
         patched: '2019-06-03T17:49:19.765Z'
