@@ -1,0 +1,67 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - sequelize > debug:
+        patched: '2019-06-03T17:49:19.765Z'
+    - jwks-rsa > debug:
+        patched: '2019-06-03T17:49:19.765Z'
+    - auth0-js > idtoken-verifier > superagent > debug:
+        patched: '2019-06-03T17:49:19.765Z'
+    - express > finalhandler > debug:
+        patched: '2019-06-03T17:49:19.765Z'
+    - express-auth0-simple > express-session > debug:
+        patched: '2019-06-03T17:49:19.765Z'
+    - sequelize > retry-as-promised > debug:
+        patched: '2019-06-03T17:49:19.765Z'
+    - auth0-js > superagent > debug:
+        patched: '2019-06-03T17:49:19.765Z'
+  'npm:extend:20180424':
+    - auth0-js > superagent > extend:
+        patched: '2019-06-03T17:49:19.765Z'
+    - jwks-rsa > request > extend:
+        patched: '2019-06-03T17:49:19.765Z'
+    - auth0-js > idtoken-verifier > superagent > extend:
+        patched: '2019-06-03T17:49:19.765Z'
+    - express-auth0-simple > passport-auth0 > request > extend:
+        patched: '2019-06-03T17:49:19.765Z'
+  'npm:hoek:20180212':
+    - jwks-rsa > request > hawk > hoek:
+        patched: '2019-06-03T17:49:19.765Z'
+    - express-jwt > jsonwebtoken > joi > hoek:
+        patched: '2019-06-03T17:49:19.765Z'
+    - jwks-rsa > request > hawk > boom > hoek:
+        patched: '2019-06-03T17:49:19.765Z'
+    - jwks-rsa > request > hawk > sntp > hoek:
+        patched: '2019-06-03T17:49:19.765Z'
+    - express-auth0-simple > passport-auth0 > request > hawk > hoek:
+        patched: '2019-06-03T17:49:19.765Z'
+    - express-jwt > jsonwebtoken > joi > topo > hoek:
+        patched: '2019-06-03T17:49:19.765Z'
+    - jwks-rsa > request > hawk > cryptiles > boom > hoek:
+        patched: '2019-06-03T17:49:19.765Z'
+    - express-auth0-simple > passport-auth0 > request > hawk > boom > hoek:
+        patched: '2019-06-03T17:49:19.765Z'
+    - express-auth0-simple > passport-auth0 > request > hawk > sntp > hoek:
+        patched: '2019-06-03T17:49:19.765Z'
+    - express-auth0-simple > passport-auth0 > request > hawk > cryptiles > boom > hoek:
+        patched: '2019-06-03T17:49:19.765Z'
+  'npm:moment:20170905':
+    - sequelize > moment:
+        patched: '2019-06-03T17:49:19.765Z'
+    - sequelize > moment-timezone > moment:
+        patched: '2019-06-03T17:49:19.765Z'
+    - express-jwt > jsonwebtoken > joi > moment:
+        patched: '2019-06-03T17:49:19.765Z'
+  'npm:stringstream:20180511':
+    - jwks-rsa > request > stringstream:
+        patched: '2019-06-03T17:49:19.765Z'
+    - express-auth0-simple > passport-auth0 > request > stringstream:
+        patched: '2019-06-03T17:49:19.765Z'
+  'npm:tough-cookie:20170905':
+    - jwks-rsa > request > tough-cookie:
+        patched: '2019-06-03T17:49:19.765Z'
+    - express-auth0-simple > passport-auth0 > request > tough-cookie:
+        patched: '2019-06-03T17:49:19.765Z'
