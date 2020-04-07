@@ -38,8 +38,8 @@
     "method-override": "^2.3.10",
     "mysql2": "^1.4.2",
     "path": "^0.12.7",
-    "sequelize": "^5.8.11",
-    "snyk": "^1.230.6"
+    "sequelize": "^5.15.1",
+    "snyk": "^1.305.0"
   },
   "snyk": true
 }
