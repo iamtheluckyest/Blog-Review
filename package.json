@@ -32,14 +32,14 @@
     "express": "^4.16.0",
     "express-auth0-simple": "^3.0.2",
     "express-handlebars": "^3.0.0",
-    "express-jwt": "^5.3.0",
+    "express-jwt": "^6.0.0",
     "express-jwt-authz": "^1.0.0",
     "jwks-rsa": "^1.2.0",
     "method-override": "^2.3.10",
     "mysql2": "^1.4.2",
     "path": "^0.12.7",
-    "sequelize": "^5.8.11",
-    "snyk": "^1.305.0"
+    "sequelize": "^5.15.1",
+    "snyk": "^1.316.1"
   },
   "snyk": true
 }
