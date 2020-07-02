@@ -32,6 +32,8 @@ patch:
         patched: '2019-06-03T17:53:03.811Z'
     - sequelize > debug:
         patched: '2019-06-03T17:53:03.811Z'
+    - snyk > proxy-agent > pac-proxy-agent > get-uri > debug:
+        patched: '2020-04-07T19:42:22.657Z'
   'npm:extend:20180424':
     - auth0-js > superagent > extend:
         patched: '2019-06-03T17:49:19.765Z'
