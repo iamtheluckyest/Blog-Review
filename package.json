@@ -38,7 +38,7 @@
     "method-override": "^2.3.10",
     "mysql2": "^1.4.2",
     "path": "^0.12.7",
-    "sequelize": "^6.19.1",
+    "sequelize": "^6.21.2",
     "snyk": "^1.685.0"
   },
   "snyk": true
