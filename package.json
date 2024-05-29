@@ -36,7 +36,7 @@
     "express-jwt-authz": "^1.0.0",
     "jwks-rsa": "^1.2.0",
     "method-override": "^2.3.10",
-    "mysql2": "^1.4.2",
+    "mysql2": "^3.9.8",
     "path": "^0.12.7",
     "sequelize": "^6.19.1",
     "snyk": "^1.685.0"
